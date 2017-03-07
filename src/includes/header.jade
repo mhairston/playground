@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title= page + ' | Cheatsheets'
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="styles/cheatsheets.css")
+  body
+
+    if (page != "Home")
+      h1= page + ' '
+        span.quiet
+          | |  
+        span.smaller  
+          a(href="index.html") Home &larr; 
+    else
+      h1(style="padding-bottom: 0; font-size: 2rem; color:#990000") Reference      
+
+
+
