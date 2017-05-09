@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-# gem "rails"
 gem 'sass'
+gem 'pug-ruby', '~> 1.0'

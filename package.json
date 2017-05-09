@@ -1,6 +1,7 @@
 {
-  "name": "cheatsheets",
-  "version": "1.2.0",
+  "name": "playground",
+  "version": "0.1.0",
+  "license": "MIT License",
   "repository": "git@bitbucket.org:mhairston/cheatsheets.git",
   "description": "Reference material for web development, etc.",
   "author": "Michael Hairston (http://possiblepieces.com)",
@@ -11,7 +12,7 @@
     "grunt-contrib-connect": "0.4.x",
     "grunt-contrib-copy": "0.4.x",
     "grunt-contrib-cssmin": "0.6.x",
-    "grunt-contrib-jade": "0.8.x",
+    "grunt-contrib-pug": "1.0.0",
     "grunt-contrib-jshint": "0.6.x",
     "grunt-contrib-sass": "latest",
     "grunt-contrib-uglify": "0.2.x",

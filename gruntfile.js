@@ -1,5 +1,3 @@
-
-
 module.exports = function(grunt) {
   grunt.initConfig({
 
@@ -14,7 +12,7 @@ module.exports = function(grunt) {
       }
     },
 
-    jade: {
+    pug: {
       compile: {
         options: {
           client: false,
@@ -22,7 +20,7 @@ module.exports = function(grunt) {
         },
         files: [ {
           cwd: "src/pages",
-          src: "**/*.jade",
+          src: ["**/*.pug","**/*.jade"],
           dest: "public",
           expand: true,
           ext: ".html"
@@ -56,8 +54,8 @@ module.exports = function(grunt) {
       //   tasks: [ 'scripts' ]
       // },
       jade: {
-        files: 'src/pages/**/*.jade',
-        tasks: [ 'jade' ]
+        files: ['src/pages/**/*.pug', 'src/pages/**/*.jade'],
+        tasks: [ 'pug' ]
       },
       copy: {
         files: 'src/images/**/*.*',
@@ -68,7 +66,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadTasks['tasks'];
-  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-pug');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -79,7 +77,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'build', 
     'Compiles all of the assets and copies the files to the public directory.', 
-    [ 'clean', 'jade', 'sass', 'copy' ]
+    [ 'clean', 'pug', 'sass', 'copy' ]
   );
 
 }
